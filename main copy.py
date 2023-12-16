@@ -8,7 +8,7 @@ screen_height = 640
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # название в шапке игры (левый верхний угол экрана
-pygame.display.set_caption('Mouse and Cat')
+pygame.display.set_caption('Mouse and Cat')'
 
 # переменная для отслеживания проигрыша
 GameOver = False
@@ -22,6 +22,7 @@ new_cursor = pygame.transform.scale(new_cursor, (64, 64))
 pygame.mouse.set_visible(False)
 
 class Menu:
+    '''Класс для работы с меню игры'''
     def __init__(self, screen_width, screen_height):
         # инициализируем кнопки, переменные
         self.screen_width = screen_width
