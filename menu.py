@@ -6,8 +6,9 @@ import pygame
 
 class Menu:
     '''Класс для работы с меню игры'''
+
     def __init__(self, screen_width, screen_height):
-        # инициализируем кнопки, переменные
+        '''инициализируем кнопки, переменные'''
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.difficulty = "easy"
@@ -21,9 +22,7 @@ class Menu:
         self.fast_button = None
 
     def draw(self, screen:pygame.Surface):
-        '''
-        отрисовывает меню
-        '''
+        '''отрисовывает меню'''
         #отрисовываем фон
         menu_bg = pygame.image.load("menu_bg1.jpg")
         screen.blit(menu_bg, (0, 0))
@@ -59,8 +58,7 @@ class Menu:
         screen.blit(start_button, (self.screen_width // 2 - 70, self.screen_height // 2 + 110))
 
     def handle_events(self, event):
-        '''отслеживаем нажатия мыши на экране меню (для реагирования на кнопки изменения сложности, запуска игры)
-        '''
+        '''отслеживаем нажатия мыши на экране меню (для реагирования на кнопки изменения сложности, запуска игры)'''
         if event.type == pygame.MOUSEBUTTONDOWN:
             self.mouse_pos = pygame.mouse.get_pos()  # получаем позицию мыши (не игровой, положение курсора находим)
             if self.start_button_rect.collidepoint(self.mouse_pos):  # если нажали на кнопку запуска игры (можно не f, а просто мышью нажать)
