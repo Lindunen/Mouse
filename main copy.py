@@ -6,6 +6,7 @@ from mouse import Mouse
 from cat import Cat
 from exit import Exit
 from loose import Loose
+
 pygame.init()
 
 # задаём размер экрана
